@@ -209,6 +209,9 @@
                         
                         <div class="relative">
                             <img src="./产品.jpg" alt="产品图片" class="w-full h-auto rounded-xl shadow-xl">
+                            <button id="play-video-btn" class="absolute bottom-4 right-4 w-16 h-16 bg-primary/80 hover:bg-primary rounded-full flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                                <i class="fa fa-play text-white text-xl"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -376,7 +379,19 @@
         </div>
     </footer>
     
-    
+    <!-- 视频模态框 -->
+    <div id="video-modal" class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-xl shadow-2xl max-w-4xl w-full mx-4 relative">
+            <button id="close-video-btn" class="absolute -top-10 right-0 text-white text-2xl hover:text-gray-300">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="aspect-w-16 aspect-h-9">
+                <video id="video-player" controls class="w-full h-full">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
     
     <script>
         // 导航栏滚动效果
